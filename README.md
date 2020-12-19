@@ -1,12 +1,20 @@
 # StarterCliWorkspace
 
-## install `yarn` 
+## Package manager
 
 ```
 npm install -g yarn
 ```
 
-## Before creating app or lib set correct value for `newProjectRoot` in `angular.json` to `apps` or `libs` respectively.
+All dependencies should be installed in `devDependencies`
+
+```
+yarn add -D <PACKAGE_NAME>
+```
+
+## Create
+
+Before creating app or lib set correct value for `newProjectRoot` in `angular.json` to `apps` or `libs` respectively.
 
 ```
 ng g application --strict
