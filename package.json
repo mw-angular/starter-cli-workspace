@@ -3,9 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "------------------ app: website ------------------": "",
+    "start:website": "ng serve website --port 4200",
+    "build:website": "ng build website --configuration production",
+    "lint:website": "ng lint website --fix",
+    "lint-ci:website": "ng lint website",
     "------------------ common ------------------": "",
     "prettier": "prettier --write \"{apps,libs}/**/*.{ts,scss,html}\"",
-    "prettier-ci": "prettier --check \"{apps,libs}/**/*.{ts,scss,html}\""
+    "prettier-ci": "prettier --check \"{apps,libs}/**/*.{ts,scss,html}\"",
+    "pre-commit": "./tools/hooks/pre-commit.sh",
+    "pre-push": "./tools/hooks/pre-push.sh"
   },
   "lint-staged": {
     "{apps,libs}/**/*.{ts,scss,html}": [
@@ -14,9 +21,9 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "./tools/hooks/pre-commit.sh",
+      "pre-commit": "yarn run pre-commit",
       "commit-msg": "node ./tools/hooks/commit-msg.js",
-      "pre-push": "./tools/hooks/pre-push.sh"
+      "pre-push": "yarn run pre-push"
     }
   },
   "dependencies": {
