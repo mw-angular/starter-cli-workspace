@@ -33,9 +33,9 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run pre-commit",
+      "pre-commit": "npm run pre-commit",
       "commit-msg": "node ./tools/hooks/commit-msg.js",
-      "pre-push": "yarn run pre-push"
+      "pre-push": "npm run pre-push"
     }
   },
   "dependencies": {

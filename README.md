@@ -1,15 +1,11 @@
 # StarterCliWorkspace
 
-## Package manager
-
-```
-npm install -g yarn
-```
+## Packages
 
 All dependencies should be installed in `devDependencies`
 
 ```
-yarn add -D <PACKAGE_NAME>
+npm i -D <PACKAGE_NAME>
 ```
 
 ## Create

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-yarn run test-ci:website || exit
-yarn run e2e-ci:website || exit
+npm run test-ci:website || exit
+npm run e2e-ci:website || exit
