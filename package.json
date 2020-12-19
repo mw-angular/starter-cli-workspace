@@ -15,8 +15,11 @@
     "e2e:website": "ng e2e website --port 6200",
     "e2e-ci:website": "ng e2e website --port 6200 --protractor-config=apps/website/e2e/protractor-ci.conf.js",
     "------------------ common ------------------": "",
+    "build-all-libs": "./tools/build-all-libs.sh",
     "prettier": "prettier --write \"{apps,libs}/**/*.{ts,scss,html}\"",
     "prettier-ci": "prettier --check \"{apps,libs}/**/*.{ts,scss,html}\"",
+    "lint-scss": "stylelint --max-warnings 0 --allow-empty-input --formatter verbose --fix \"{apps,libs}/**/*.scss\"",
+    "lint-scss-ci": "stylelint --max-warnings 0 --allow-empty-input \"{apps,libs}/**/*.scss\"",
     "pre-commit": "./tools/hooks/pre-commit.sh",
     "pre-push": "./tools/hooks/pre-push.sh"
   },
