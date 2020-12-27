@@ -42,6 +42,7 @@ jobs:
       - name: Lint
         run: |
           npm run lint-ci:website
+          npm run lint-ci:styleguide
           npm run lint-ci:design-system
 
       - name: Build libs
@@ -50,12 +51,15 @@ jobs:
       - name: Build apps
         run: |
           npm run build:website
+          npm run build:styleguide
 
       - name: Test
         run: |
           npm run test-ci:website
+          npm run test-ci:styleguide
           npm run test-ci:design-system
 
       - name: E2E
         run: |
           npm run e2e-ci:website
+          npm run e2e-ci:styleguide

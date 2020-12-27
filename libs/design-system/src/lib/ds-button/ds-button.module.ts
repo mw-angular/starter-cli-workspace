@@ -6,5 +6,4 @@ import { DsButtonComponent } from './components/ds-button/ds-button.component';
   declarations: [DsButtonComponent],
   exports: [DsButtonComponent],
 })
-export class DsButtonModule {
-}
+export class DsButtonModule {}

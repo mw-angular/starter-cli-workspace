@@ -5,5 +5,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './ds-button.component.html',
 })
-export class DsButtonComponent {
-}
+export class DsButtonComponent {}
