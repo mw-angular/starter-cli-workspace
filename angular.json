@@ -128,6 +128,46 @@
           }
         }
       }
+    },
+    "design-system": {
+      "projectType": "library",
+      "root": "libs/design-system",
+      "sourceRoot": "libs/design-system/src",
+      "prefix": "ds",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "libs/design-system/tsconfig.lib.json",
+            "project": "libs/design-system/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/design-system/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/design-system/src/test.ts",
+            "tsConfig": "libs/design-system/tsconfig.spec.json",
+            "karmaConfig": "libs/design-system/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/design-system/tsconfig.lib.json",
+              "libs/design-system/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "website"

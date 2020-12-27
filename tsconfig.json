@@ -21,7 +21,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "design-system": [
+        "dist/design-system/design-system",
+        "dist/design-system"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
