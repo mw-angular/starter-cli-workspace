@@ -1,2 +1,2 @@
-export * from './lib/ds-button/ds-button.module';
-export * from './lib/ds-button/components/ds-button/ds-button.component';
+export * from './lib/modules/ds-button/ds-button.module';
+export * from './lib/modules/ds-button/components/ds-button/ds-button.component';

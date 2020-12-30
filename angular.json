@@ -20,6 +20,14 @@
       "sourceRoot": "apps/website/src",
       "prefix": "app",
       "architect": {
+        "tailwindcss": {
+          "builder": "@mw-angular/tailwindcss-builder:general",
+          "options": {
+            "configFile": "libs/design-system/src/lib/styles/tailwind.config.js",
+            "cssFile": "libs/design-system/src/lib/styles/tailwind.css",
+            "outputPath": "apps/website/src/styles"
+          }
+        },
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
@@ -34,12 +42,15 @@
               "apps/website/src/assets"
             ],
             "styles": [
-              "apps/website/src/styles.scss"
+              "apps/website/src/styles/tailwind.dev.css"
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
+              "styles": [
+                "apps/website/src/styles/tailwind.css"
+              ],
               "fileReplacements": [
                 {
                   "replace": "apps/website/src/environments/environment.ts",
@@ -97,7 +108,7 @@
               "apps/website/src/assets"
             ],
             "styles": [
-              "apps/website/src/styles.scss"
+              "apps/website/src/styles/tailwind.dev.css"
             ],
             "scripts": []
           }
@@ -143,6 +154,14 @@
       "sourceRoot": "apps/styleguide/src",
       "prefix": "app",
       "architect": {
+        "tailwindcss": {
+          "builder": "@mw-angular/tailwindcss-builder:general",
+          "options": {
+            "configFile": "libs/design-system/src/lib/styles/tailwind.config.js",
+            "cssFile": "libs/design-system/src/lib/styles/tailwind.css",
+            "outputPath": "apps/styleguide/src/styles"
+          }
+        },
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
@@ -157,12 +176,15 @@
               "apps/styleguide/src/assets"
             ],
             "styles": [
-              "apps/styleguide/src/styles.scss"
+              "apps/styleguide/src/styles/tailwind.dev.css"
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
+              "styles": [
+                "apps/styleguide/src/styles/tailwind.css"
+              ],
               "fileReplacements": [
                 {
                   "replace": "apps/styleguide/src/environments/environment.ts",
@@ -220,7 +242,7 @@
               "apps/styleguide/src/assets"
             ],
             "styles": [
-              "apps/styleguide/src/styles.scss"
+              "apps/styleguide/src/styles/tailwind.dev.css"
             ],
             "scripts": []
           }
