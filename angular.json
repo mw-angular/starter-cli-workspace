@@ -42,12 +42,15 @@
               "apps/website/src/assets"
             ],
             "styles": [
-              "apps/website/src/styles.scss"
+              "apps/website/src/styles/tailwind.dev.css"
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
+              "styles": [
+                "apps/website/src/styles/tailwind.css"
+              ],
               "fileReplacements": [
                 {
                   "replace": "apps/website/src/environments/environment.ts",
@@ -105,7 +108,7 @@
               "apps/website/src/assets"
             ],
             "styles": [
-              "apps/website/src/styles.scss"
+              "apps/website/src/styles/tailwind.dev.css"
             ],
             "scripts": []
           }
@@ -173,12 +176,15 @@
               "apps/styleguide/src/assets"
             ],
             "styles": [
-              "apps/styleguide/src/styles.scss"
+              "apps/styleguide/src/styles/tailwind.dev.css"
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
+              "styles": [
+                "apps/styleguide/src/styles/tailwind.css"
+              ],
               "fileReplacements": [
                 {
                   "replace": "apps/styleguide/src/environments/environment.ts",
@@ -236,7 +242,7 @@
               "apps/styleguide/src/assets"
             ],
             "styles": [
-              "apps/styleguide/src/styles.scss"
+              "apps/styleguide/src/styles/tailwind.dev.css"
             ],
             "scripts": []
           }

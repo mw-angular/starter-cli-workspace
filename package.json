@@ -5,7 +5,7 @@
   "scripts": {
     "------------------ app: website ------------------": "",
     "start:website": "ng serve website --port 4200",
-    "build:website": "ng build website --configuration production",
+    "build:website": "ng run website:tailwindcss && ng build website --configuration production",
     "tailwindcss:website": "ng run website:tailwindcss",
     "lint:website": "ng lint website --fix",
     "lint-ci:website": "ng lint website",
@@ -17,7 +17,7 @@
     "e2e-ci:website": "ng e2e website --port 6200 --protractor-config=apps/website/e2e/protractor-ci.conf.js",
     "------------------ app: styleguide ------------------": "",
     "start:styleguide": "ng serve styleguide --port 4300",
-    "build:styleguide": "ng build styleguide --configuration production",
+    "build:styleguide": "npm run tailwindcss:styleguide && ng build styleguide --configuration production",
     "tailwindcss:styleguide": "ng run styleguide:tailwindcss",
     "lint:styleguide": "ng lint styleguide --fix",
     "lint-ci:styleguide": "ng lint styleguide",
