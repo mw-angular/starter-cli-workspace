@@ -1,5 +1,13 @@
 # StarterCliWorkspace
 
+## Start
+
+```
+npm run build-all-libs
+npm run tailwindcss:website
+npm run start:website
+```
+
 ## Packages
 
 All dependencies should be installed in `devDependencies`

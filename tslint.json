@@ -168,6 +168,7 @@
     "no-unnecessary-class": false,
     "strict-boolean-expressions": false,
     "prefer-readonly": false,
+    "no-unnecessary-callback-wrapper": false,
     "member-access": [true, "no-public"],
     "only-arrow-functions": [true, "allow-declarations"]
   }

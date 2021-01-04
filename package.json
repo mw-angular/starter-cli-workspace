@@ -5,7 +5,7 @@
   "scripts": {
     "------------------ app: website ------------------": "",
     "start:website": "ng serve website --port 4200",
-    "build:website": "ng run website:tailwindcss && ng build website --configuration production",
+    "build:website": "npm run build-all-libs && npm run tailwindcss:website && ng build website --configuration production",
     "tailwindcss:website": "ng run website:tailwindcss",
     "lint:website": "ng lint website --fix",
     "lint-ci:website": "ng lint website",
@@ -17,7 +17,7 @@
     "e2e-ci:website": "ng e2e website --port 6200 --protractor-config=apps/website/e2e/protractor-ci.conf.js",
     "------------------ app: styleguide ------------------": "",
     "start:styleguide": "ng serve styleguide --port 4300",
-    "build:styleguide": "npm run tailwindcss:styleguide && ng build styleguide --configuration production",
+    "build:styleguide": "npm run build-all-libs && npm run tailwindcss:styleguide && ng build styleguide --configuration production",
     "tailwindcss:styleguide": "ng run styleguide:tailwindcss",
     "lint:styleguide": "ng lint styleguide --fix",
     "lint-ci:styleguide": "ng lint styleguide",
@@ -94,6 +94,7 @@
   },
   "devDependencies": {
     "@mw-angular/tailwindcss-builder": "0.0.11",
+    "@tailwindcss/forms": "^0.2.1",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
     "postcss": "^8.2.2",

@@ -511,6 +511,68 @@ video {
   height: auto;
 }
 
+
+      [type='time'],
+      textarea,
+      select
+     {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  border-color: #6b7280;
+  border-width: 1px;
+  border-radius: 0px;
+  padding-top: 0.5rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+ [type='time']:focus, textarea:focus, select:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: #2563eb;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  border-color: #2563eb;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #6b7280;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #6b7280;
+  opacity: 1;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #6b7280;
+  opacity: 1;
+}
+
+select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+  -webkit-print-color-adjust: exact;
+          color-adjust: exact;
+}
+
+.table {
+  display: table;
+}
+
 * {
   --tw-shadow: 0 0 #0000;
 }
@@ -524,45 +586,45 @@ video {
   --tw-ring-shadow: 0 0 #0000;
 }
 
-@-webkit-keyframes tw-spin {
+@-webkit-keyframes spin {
   to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes tw-spin {
+@keyframes spin {
   to {
     transform: rotate(360deg);
   }
 }
 
-@-webkit-keyframes tw-ping {
+@-webkit-keyframes ping {
   75%, 100% {
     transform: scale(2);
     opacity: 0;
   }
 }
 
-@keyframes tw-ping {
+@keyframes ping {
   75%, 100% {
     transform: scale(2);
     opacity: 0;
   }
 }
 
-@-webkit-keyframes tw-pulse {
+@-webkit-keyframes pulse {
   50% {
     opacity: .5;
   }
 }
 
-@keyframes tw-pulse {
+@keyframes pulse {
   50% {
     opacity: .5;
   }
 }
 
-@-webkit-keyframes tw-bounce {
+@-webkit-keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
     -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
@@ -576,7 +638,7 @@ video {
   }
 }
 
-@keyframes tw-bounce {
+@keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
     -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
