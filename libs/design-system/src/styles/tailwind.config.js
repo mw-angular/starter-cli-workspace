@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  prefix: 'tw-',
   purge: [
     `libs/design-system/src/**/*.html`,
     `libs/design-system/src/**/*.component.ts`

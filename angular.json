@@ -23,8 +23,8 @@
         "tailwindcss": {
           "builder": "@mw-angular/tailwindcss-builder:general",
           "options": {
-            "configFile": "libs/design-system/src/lib/styles/tailwind.config.js",
-            "cssFile": "libs/design-system/src/lib/styles/tailwind.css",
+            "configFile": "libs/design-system/src/styles/tailwind.config.js",
+            "cssFile": "libs/design-system/src/styles/tailwind.css",
             "outputPath": "apps/website/src/styles"
           }
         },
@@ -39,7 +39,12 @@
             "aot": true,
             "assets": [
               "apps/website/src/favicon.ico",
-              "apps/website/src/assets"
+              "apps/website/src/assets",
+              {
+                "glob": "**/*",
+                "input": "libs/design-system/src/assets",
+                "output": "design-system"
+              }
             ],
             "styles": [
               "apps/website/src/styles/tailwind.dev.css"
@@ -105,7 +110,12 @@
             "karmaConfig": "apps/website/karma.conf.js",
             "assets": [
               "apps/website/src/favicon.ico",
-              "apps/website/src/assets"
+              "apps/website/src/assets",
+              {
+                "glob": "**/*",
+                "input": "libs/design-system/src/assets",
+                "output": "design-system"
+              }
             ],
             "styles": [
               "apps/website/src/styles/tailwind.dev.css"
@@ -157,8 +167,8 @@
         "tailwindcss": {
           "builder": "@mw-angular/tailwindcss-builder:general",
           "options": {
-            "configFile": "libs/design-system/src/lib/styles/tailwind.config.js",
-            "cssFile": "libs/design-system/src/lib/styles/tailwind.css",
+            "configFile": "libs/design-system/src/styles/tailwind.config.js",
+            "cssFile": "libs/design-system/src/styles/tailwind.css",
             "outputPath": "apps/styleguide/src/styles"
           }
         },
@@ -173,7 +183,12 @@
             "aot": true,
             "assets": [
               "apps/styleguide/src/favicon.ico",
-              "apps/styleguide/src/assets"
+              "apps/styleguide/src/assets",
+              {
+                "glob": "**/*",
+                "input": "libs/design-system/src/assets",
+                "output": "design-system"
+              }
             ],
             "styles": [
               "apps/styleguide/src/styles/tailwind.dev.css"
@@ -239,7 +254,12 @@
             "karmaConfig": "apps/styleguide/karma.conf.js",
             "assets": [
               "apps/styleguide/src/favicon.ico",
-              "apps/styleguide/src/assets"
+              "apps/styleguide/src/assets",
+              {
+                "glob": "**/*",
+                "input": "libs/design-system/src/assets",
+                "output": "design-system"
+              }
             ],
             "styles": [
               "apps/styleguide/src/styles/tailwind.dev.css"
