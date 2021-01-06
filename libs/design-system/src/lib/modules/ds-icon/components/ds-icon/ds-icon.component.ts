@@ -5,6 +5,7 @@ import { filter, switchMap, takeUntil } from 'rxjs/operators';
 import { DsIconCategory } from '../../entities/ds-icon-category';
 import { DsIconName } from '../../entities/ds-icon-name';
 import { DsIconSvgClass } from '../../entities/ds-icon-svg-class';
+import { prepareClassListHelper } from '../../helpers/prepare-class-list.helper';
 import { DsIconService } from '../../services/ds-icon.service';
 
 @Component({
@@ -73,12 +74,7 @@ export class DsIconComponent implements OnDestroy {
   }
 
   private addClasses(svg: SVGElement, svgClass: DsIconSvgClass): SVGElement {
-    const svgClassList: string[] =
-      typeof svgClass === 'string'
-        ? svgClass.split(' ').filter((klass: string): klass is string => Boolean(klass))
-        : svgClass;
-
-    svgClassList.forEach((klass: string): void => {
+    prepareClassListHelper(svgClass).forEach((klass: string): void => {
       this.renderer.addClass(svg, klass);
     });
 
