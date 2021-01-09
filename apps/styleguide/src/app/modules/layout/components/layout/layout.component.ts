@@ -1,5 +1,5 @@
 import { animate, animateChild, query, sequence, state, style, transition, trigger } from '@angular/animations';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -55,6 +55,8 @@ import { BehaviorSubject } from 'rxjs';
   ],
 })
 export class LayoutComponent {
+  @Input() title: string | null = null;
+
   isOpenedSidebar$$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   openSidebar(): void {

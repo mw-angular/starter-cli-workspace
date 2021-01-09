@@ -1,7 +1,13 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
+import { TitleService } from '../../services/title.service';
+
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `<h1>Icons</h1>`,
+  template: ``,
 })
-export class IconsPageContainerComponent {}
+export class IconsPageContainerComponent {
+  constructor(private titleService: TitleService) {
+    this.titleService.setTitle('Icons');
+  }
+}
