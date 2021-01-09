@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, ElementRef, Input, OnDestroy, Renderer2 } from '@angular/core';
 import { BehaviorSubject, combineLatest, Observable, ReplaySubject, Subject } from 'rxjs';
-import { filter, switchMap, takeUntil } from 'rxjs/operators';
+import { debounceTime, filter, switchMap, takeUntil } from 'rxjs/operators';
 
 import { DsIconCategory } from '../../entities/ds-icon-category';
 import { DsIconName } from '../../entities/ds-icon-name';
@@ -36,6 +36,7 @@ export class DsIconComponent implements OnDestroy {
   private name$$: ReplaySubject<DsIconName> = new ReplaySubject(1);
   private svgClass$$: BehaviorSubject<DsIconSvgClass> = new BehaviorSubject<DsIconSvgClass>('');
   private destroy$$: Subject<void> = new Subject<void>();
+  private debounceTime: number = 100;
 
   constructor(private dsIconService: DsIconService, private renderer: Renderer2, private elementRef: ElementRef) {
     this.render();
@@ -57,20 +58,15 @@ export class DsIconComponent implements OnDestroy {
     );
 
     combineLatest([iconString$, this.svgClass$$])
-      .pipe(takeUntil(this.destroy$$))
+      .pipe(
+        debounceTime(this.debounceTime),
+        takeUntil(this.destroy$$),
+      )
       .subscribe(([iconString, svgClass]: [string, DsIconSvgClass]): void => {
-        let icon: SVGElement = this.svgElementFromString(iconString);
-        icon = this.addClasses(icon, svgClass);
-        this.renderer.appendChild(this.elementRef.nativeElement, icon);
+        this.renderer.setProperty(this.elementRef.nativeElement, 'innerHTML', iconString);
+        const icon: SVGElement = this.elementRef.nativeElement.querySelector('svg') as SVGElement;
+        this.addClasses(icon, svgClass);
       });
-  }
-
-  private svgElementFromString(str: string): SVGElement {
-    const div: HTMLElement = this.renderer.createElement('DIV');
-
-    this.renderer.setProperty(div, 'innerHTML', str);
-
-    return div.querySelector('svg') as SVGElement;
   }
 
   private addClasses(svg: SVGElement, svgClass: DsIconSvgClass): SVGElement {
