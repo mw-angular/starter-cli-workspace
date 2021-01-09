@@ -58,10 +58,7 @@ export class DsIconComponent implements OnDestroy {
     );
 
     combineLatest([iconString$, this.svgClass$$])
-      .pipe(
-        debounceTime(this.debounceTime),
-        takeUntil(this.destroy$$),
-      )
+      .pipe(debounceTime(this.debounceTime), takeUntil(this.destroy$$))
       .subscribe(([iconString, svgClass]: [string, DsIconSvgClass]): void => {
         this.renderer.setProperty(this.elementRef.nativeElement, 'innerHTML', iconString);
         const icon: SVGElement = this.elementRef.nativeElement.querySelector('svg') as SVGElement;

@@ -1,4 +1,4 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { animate, animateChild, query, sequence, state, style, transition, trigger } from '@angular/animations';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -7,6 +7,21 @@ import { BehaviorSubject } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './layout.component.html',
   animations: [
+    trigger('remove', [
+      state(
+        'true',
+        style({
+          transform: 'translateX(-120%)',
+        }),
+      ),
+      state(
+        'false',
+        style({
+          transform: 'translateX(0px)',
+        }),
+      ),
+      transition('true <=> false', [sequence([query(':self', [animate(0)]), query('@*', animateChild())])]),
+    ]),
     trigger('showHideOverlay', [
       state(
         'show',

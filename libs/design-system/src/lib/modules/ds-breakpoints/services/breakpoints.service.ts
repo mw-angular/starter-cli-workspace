@@ -7,15 +7,9 @@ import { Breakpoints } from '../entities/breakpoints';
 
 @Injectable()
 export class BreakpointsService {
-  constructor(private breakpointObserver: BreakpointObserver) {
-  }
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
   matches(breakpoint: Breakpoints): Observable<boolean> {
-    return this.breakpointObserver.observe([
-      breakpoint,
-    ])
-      .pipe(
-        map(({ matches }: BreakpointState): boolean => matches),
-      );
+    return this.breakpointObserver.observe([breakpoint]).pipe(map(({ matches }: BreakpointState): boolean => matches));
   }
 }

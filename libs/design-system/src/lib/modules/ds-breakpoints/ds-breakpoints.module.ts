@@ -4,12 +4,7 @@ import { NgModule } from '@angular/core';
 import { BreakpointsService } from './services/breakpoints.service';
 
 @NgModule({
-  imports: [
-    LayoutModule,
-  ],
-  providers: [
-    BreakpointsService,
-  ],
+  imports: [LayoutModule],
+  providers: [BreakpointsService],
 })
-export class DsBreakpointsModule {
-}
+export class DsBreakpointsModule {}
