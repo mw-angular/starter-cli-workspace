@@ -1,3 +1,7 @@
+export * from './lib/modules/ds-breakpoints/ds-breakpoints.module';
+export * from './lib/modules/ds-breakpoints/services/breakpoints.service';
+export * from './lib/modules/ds-breakpoints/entities/breakpoints';
+
 export * from './lib/modules/ds-button/ds-button.module';
 export * from './lib/modules/ds-button/components/ds-button/ds-button.component';
 

@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-main-layout-container',
+  selector: 'app-layout-container',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <app-main-layout>
+    <app-layout>
       <ng-content></ng-content>
-    </app-main-layout>
+    </app-layout>
   `,
 })
-export class MainLayoutContainerComponent {}
+export class LayoutContainerComponent {}

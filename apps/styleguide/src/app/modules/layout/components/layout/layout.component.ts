@@ -3,9 +3,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  selector: 'app-main-layout',
+  selector: 'app-layout',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './main-layout.component.html',
+  templateUrl: './layout.component.html',
   animations: [
     trigger('showHideOverlay', [
       state(
@@ -39,7 +39,7 @@ import { BehaviorSubject } from 'rxjs';
     ]),
   ],
 })
-export class MainLayoutComponent {
+export class LayoutComponent {
   isOpenedSidebar$$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   openSidebar(): void {
