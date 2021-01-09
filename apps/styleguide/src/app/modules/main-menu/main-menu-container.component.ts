@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+
 import { MainMenuItem } from './entities/main-menu-item';
 
 @Component({
@@ -10,8 +11,13 @@ export class MainMenuContainerComponent {
   items: MainMenuItem[] = [
     {
       icon: 'folder',
-      name: 'Home',
-      url: '/',
+      name: 'Icons',
+      url: '/icons',
+    },
+    {
+      icon: 'folder',
+      name: 'Colors',
+      url: '/colors',
     },
     {
       icon: 'folder',
