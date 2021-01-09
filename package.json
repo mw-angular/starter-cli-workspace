@@ -5,6 +5,7 @@
   "scripts": {
     "------------------ app: website ------------------": "",
     "start:website": "ng serve website --port 4200",
+    "start-for-devices:website": "npm run start:website -- --host 0.0.0.0",
     "build:website": "npm run build-all-libs && npm run tailwindcss:website && ng build website --configuration production --stats-json",
     "tailwindcss:website": "ng run website:tailwindcss",
     "lint:website": "ng lint website --fix",
@@ -18,6 +19,7 @@
     "analyze:website": "webpack-bundle-analyzer dist/website/stats.json",
     "------------------ app: styleguide ------------------": "",
     "start:styleguide": "ng serve styleguide --port 4300",
+    "start-for-devices:styleguide": "npm run start:styleguide -- --host 0.0.0.0",
     "build:styleguide": "npm run build-all-libs && npm run tailwindcss:styleguide && ng build styleguide --configuration production --stats-json",
     "tailwindcss:styleguide": "ng run styleguide:tailwindcss",
     "lint:styleguide": "ng lint styleguide --fix",
