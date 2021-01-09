@@ -1,5 +1,9 @@
 # DesignSystem
 
+## Icons 
+
+You can find icons in the [repository](https://heroicons.com/).
+
 ## Add to new project
 
 1. Follow instructions for [tailwind builder](https://github.com/mw-angular/toolbox/tree/main/libs/mw-angular/tailwindcss-builder#mw-angulartailwindcss-builder)
