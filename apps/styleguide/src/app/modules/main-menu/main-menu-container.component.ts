@@ -19,10 +19,5 @@ export class MainMenuContainerComponent {
       name: 'Colors',
       url: '/colors',
     },
-    {
-      icon: 'folder',
-      name: 'Buttons',
-      url: '/buttons',
-    },
   ];
 }
