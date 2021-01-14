@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { DsIconCategory, DsIconName } from 'design-system';
+import { DsIconCategory } from 'design-system';
+
+import { IconsPageItem } from '../../entities/icons-page-item';
 
 @Component({
   selector: 'app-icons-page',
@@ -7,9 +9,9 @@ import { DsIconCategory, DsIconName } from 'design-system';
   templateUrl: './icons-page.component.html',
 })
 export class IconsPageComponent {
-  @Input() items: ReadonlyMap<DsIconCategory, DsIconName[]> = new Map();
+  @Input() items: ReadonlyMap<DsIconCategory, IconsPageItem[]> = new Map();
 
-  trackByFn(_index: number, item: DsIconName): string {
-    return item;
+  trackByFn(_index: number, item: IconsPageItem): string {
+    return item.category + item.name;
   }
 }

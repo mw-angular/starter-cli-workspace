@@ -25,10 +25,10 @@
           "options": {
             "themes": [
               {
-                "configFile": "libs/design-system/src/styles/tailwind.config.js",
+                "configFile": "libs/design-system/src/styles/theme-general.config.js",
                 "cssFile": "libs/design-system/src/styles/tailwind.css",
                 "outputPath": "apps/website/src/styles",
-                "outputFileName": "tailwind"
+                "outputFileName": "theme-general"
               }
             ]
           }
@@ -52,14 +52,14 @@
               }
             ],
             "styles": [
-              "apps/website/src/styles/tailwind.dev.css"
+              "apps/website/src/styles/theme-general.dev.css"
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
               "styles": [
-                "apps/website/src/styles/tailwind.css"
+                "apps/website/src/styles/theme-general.css"
               ],
               "fileReplacements": [
                 {
@@ -123,7 +123,7 @@
               }
             ],
             "styles": [
-              "apps/website/src/styles/tailwind.dev.css"
+              "apps/website/src/styles/theme-general.dev.css"
             ],
             "scripts": []
           }
@@ -174,10 +174,10 @@
           "options": {
             "themes": [
               {
-                "configFile": "libs/design-system/src/styles/tailwind.config.js",
+                "configFile": "libs/design-system/src/styles/theme-general.config.js",
                 "cssFile": "libs/design-system/src/styles/tailwind.css",
                 "outputPath": "apps/styleguide/src/styles",
-                "outputFileName": "tailwind"
+                "outputFileName": "theme-general"
               }
             ]
           }
@@ -201,14 +201,14 @@
               }
             ],
             "styles": [
-              "apps/styleguide/src/styles/tailwind.dev.css"
+              "apps/styleguide/src/styles/theme-general.dev.css"
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
               "styles": [
-                "apps/styleguide/src/styles/tailwind.css"
+                "apps/styleguide/src/styles/theme-general.css"
               ],
               "fileReplacements": [
                 {
@@ -272,7 +272,7 @@
               }
             ],
             "styles": [
-              "apps/styleguide/src/styles/tailwind.dev.css"
+              "apps/styleguide/src/styles/theme-general.dev.css"
             ],
             "scripts": []
           }
