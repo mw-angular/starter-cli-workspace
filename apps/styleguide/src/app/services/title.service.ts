@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
+import { MwMetaService } from '@mw-angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-
-import { MetaService } from './meta.service';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +8,7 @@ import { MetaService } from './meta.service';
 export class TitleService {
   private title$$: BehaviorSubject<string> = new BehaviorSubject<string>('');
 
-  constructor(private metaService: MetaService) {}
+  constructor(private metaService: MwMetaService) {}
 
   setTitle(value: string): void {
     this.title$$.next(value);
