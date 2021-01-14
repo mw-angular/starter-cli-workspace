@@ -23,9 +23,14 @@
         "tailwindcss": {
           "builder": "@mw-angular/tailwindcss-builder:general",
           "options": {
-            "configFile": "libs/design-system/src/styles/tailwind.config.js",
-            "cssFile": "libs/design-system/src/styles/tailwind.css",
-            "outputPath": "apps/website/src/styles"
+            "themes": [
+              {
+                "configFile": "libs/design-system/src/styles/tailwind.config.js",
+                "cssFile": "libs/design-system/src/styles/tailwind.css",
+                "outputPath": "apps/website/src/styles",
+                "outputFileName": "tailwind"
+              }
+            ]
           }
         },
         "build": {
@@ -167,9 +172,14 @@
         "tailwindcss": {
           "builder": "@mw-angular/tailwindcss-builder:general",
           "options": {
-            "configFile": "libs/design-system/src/styles/tailwind.config.js",
-            "cssFile": "libs/design-system/src/styles/tailwind.css",
-            "outputPath": "apps/styleguide/src/styles"
+            "themes": [
+              {
+                "configFile": "libs/design-system/src/styles/tailwind.config.js",
+                "cssFile": "libs/design-system/src/styles/tailwind.css",
+                "outputPath": "apps/styleguide/src/styles",
+                "outputFileName": "tailwind"
+              }
+            ]
           }
         },
         "build": {
