@@ -2,10 +2,7 @@ const fs = require('fs');
 
 const message = fs.readFileSync(process.env.HUSKY_GIT_PARAMS, 'utf-8');
 
-if (
-  !/^#\d+\s.{5,100}/.test(message) &&
-  !/^Merge/.test(message)
-) {
+if (!/^#\d+\s.{5,100}/.test(message)) {
   console.log(`
     Commit message should follow the pattern:
     #<ISSUE> <SUBJECT>
