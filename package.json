@@ -43,7 +43,6 @@
     "test-ci:design-system": "ng test design-system --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "------------------ common ------------------": "",
     "build-all-libs": "./tools/build-all-libs.sh",
-    "update-from-template-repository": "./tools/update-from-template-repository.sh",
     "prettier": "prettier --write \"{apps,libs}/**/*.{ts,scss,html}\"",
     "prettier-ci": "prettier --check \"{apps,libs}/**/*.{ts,scss,html}\"",
     "lint-scss": "stylelint --max-warnings 0 --allow-empty-input --formatter verbose --fix \"{apps,libs}/**/*.scss\"",
