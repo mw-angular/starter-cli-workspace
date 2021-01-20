@@ -1,6 +1,7 @@
 {
   "name": "starter-cli-workspace",
   "version": "0.0.0",
+  "license": "UNLICENSED",
   "private": true,
   "scripts": {
     "------------------ app: website ------------------": "",
