@@ -43,7 +43,6 @@
     "test-ci:design-system": "ng test design-system --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "------------------ common ------------------": "",
     "build-all-libs": "./tools/build-all-libs.sh",
-    "update-from-template-repository": "./tools/update-from-template-repository.sh",
     "prettier": "prettier --write \"{apps,libs}/**/*.{ts,scss,html}\"",
     "prettier-ci": "prettier --check \"{apps,libs}/**/*.{ts,scss,html}\"",
     "lint-scss": "stylelint --max-warnings 0 --allow-empty-input --formatter verbose --fix \"{apps,libs}/**/*.scss\"",
@@ -100,17 +99,19 @@
   "devDependencies": {
     "@angular/cdk": "^11.0.3",
     "@mw-angular/core": "^1.4.0",
-    "@mw-angular/tailwindcss-builder": "^1.1.0",
+    "@mw-angular/tailwindcss-builder": "^1.1.1",
     "@tailwindcss/forms": "^0.2.1",
-    "autoprefixer": "^10.2.1",
+    "autoprefixer": "^10.2.3",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
     "postcss": "^8.2.4",
+    "postcss-import": "^14.0.0",
     "prettier": "2.2.1",
     "stylelint": "^13.8.0",
     "stylelint-config-hudochenkov": "^5.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0",
+    "tailwindcss": "^2.0.2",
     "webpack-bundle-analyzer": "^4.3.0"
   }
 }
